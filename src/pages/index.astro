@@ -2,6 +2,7 @@
 import "../styles/global.css"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Head from "../components/Head.astro"
+import Greeting from "../components/Greeting"
 
 const pageTitle = "Inicio 🚀"
 ---
@@ -11,6 +12,7 @@ const pageTitle = "Inicio 🚀"
 	<body>
 		<BaseLayout pageTitle={pageTitle}>
 			<h2>Mi sitio con Astro 🧑🏻‍🚀🚀</h2>
+			<Greeting client:load messages={["Hola!", "Qué tal?", "Hello astronaut!"]} />
 		</BaseLayout>	
 	</body>
 </html>

@@ -1,97 +1,122 @@
 html {
     background-color: #f1f5f9;
     font-family: sans-serif;
-  }
-  
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-    color: blueviolet;
-  }
+}
 
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+  
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+  
+* {
+  box-sizing: border-box;
+}
+  
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  color: blueviolet;
+}
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+  
+.nav-links a {
+  text-decoration: none;
+  color:rgb(76, 3, 125);
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  margin: 0 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.nav-links:visited {
+  color: rgb(186, 29, 234);
+}
+  
+.nav-links a:hover, a:focus {
+  background-color: #a82dd842;
+}
+  
+.expanded {
+  display: unset;
+}
+  
+@media screen and (min-width: 636px) {
   .nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
   }
   
   .nav-links a {
+    display: inline-block;
     text-decoration: none;
-    color:rgb(76, 3, 125);
+    color:aliceblue;
     padding: 0 1rem;
     border: 2px solid transparent;
     margin: 0 0.5rem;
-    display: block;
-    text-align: center;
+    font-size: 0.9rem;
   }
 
-  .nav-links:visited {
-    color: rgb(186, 29, 234);
+  .nav-links a:hover{
+    color:rgb(225, 231, 237);
+    border-bottom: 2px solid rgb(225, 231, 237);
+    background: none;
   }
-  
-  .nav-links a:hover, a:focus {
-    background-color: #a82dd842;
-  }
-  
-  .expanded {
-    display: unset;
-  }
-  
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
-    }
-  
-    .nav-links a {
-      display: inline-block;
-      text-decoration: none;
-      color:aliceblue;
-      padding: 0 1rem;
-      border: 2px solid transparent;
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a:hover{
-      color:rgb(225, 231, 237);
-      border-bottom: 2px solid rgb(225, 231, 237);
-      background: none;
-    }
-    
-    .hamburger {
-      display: none;
-    }
-  }
-
+      
   .hamburger {
-    padding: 0 20px;
-    cursor: pointer;
-    width: 100%;
+    display: none;
   }
+}
+
+.hamburger {
+  padding: 0 20px;
+  cursor: pointer;
+  width: 100%;
+}
   
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: indigo;
-    margin: 0 0 0.5rem auto;
-  }
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: indigo;
+  margin: 0 0 0.5rem auto;
+}
+
+.greeting {
+  color: indigo;
+  background-color: rgba(76, 0, 130, 0.13);
+  border: 3px solid rgba(76, 0, 130, 0.486);
+  padding: 0.4rem 0.8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.greeting:hover {
+  color: rgb(248, 247, 248);
+  background-color: rgba(76, 0, 130, 0.678);
+}
