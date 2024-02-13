@@ -1,0 +1,19 @@
+---
+import "../styles/global.css"
+import Head from "../components/Head.astro";
+import BaseLayout from "../layouts/BaseLayout.astro"
+import BlogPost from "../components/BlogPost.astro";
+
+const pageTitle = "Blog"
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<Head title={pageTitle} />
+<body>
+    <BaseLayout pageTitle="This is my blog 📒">
+        <p>Aqui es donde publicare cosas interesantes 🥳</p>
+        <ul>
+            {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+        </ul>
+    </BaseLayout>
+</body>

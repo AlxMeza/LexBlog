@@ -1,0 +1,26 @@
+---
+import Navigation from "./Navigation.astro"
+import Hamburger from "../components/Hamburger.astro"
+---
+
+<style>
+    header {
+        background-color: none;
+    }
+
+    @media screen and (min-width: 636px){
+        header {
+            background-color: rgb(94, 10, 173);
+            border-radius: 1.5rem;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
+    }
+</style>
+
+<header>
+    <nav>
+        <Hamburger />
+        <Navigation />
+    </nav>
+</header>

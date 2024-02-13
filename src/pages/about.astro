@@ -1,0 +1,50 @@
+---
+import "../styles/global.css"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Head from "../components/Head.astro";
+
+const pageTitle = "Sobre mí"
+
+const identity = {
+  firstName: "Alexis",
+  country: "México",
+  occupation: "Desarrollador de software",
+  hobbies: ["tecnologia", "musica", "running"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Tailwind"];
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+---
+
+<Head title={pageTitle}>
+  <style define:vars={{skillColor, fontWeight, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+          color: var(--skillColor);
+          font-weight: var(--fontWeight);
+          text-transform: var(--textCase);
+      }
+  </style>
+</Head>
+<body>
+    <BaseLayout pageTitle={`${pageTitle} 💻`}>
+      <h2>Es un gusto conocerte!</h2>
+  
+      <ul>
+          <li>Me llamo {identity.firstName}.</li>
+          <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+          {identity.hobbies.length >= 2 &&
+            <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+          }
+      </ul>
+      <p>Mis habilidades son:</p>
+      <ul>
+          {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+    </BaseLayout>
+</body>
