@@ -2,12 +2,13 @@
 import Navigation from "./Navigation.astro"
 import Hamburger from "../components/Hamburger.astro"
 import ThemeIcon from "../components/ThemeIcon.astro"
+import Logo from "../components/Logo.astro"
 ---
 
 <header>
     <div class="hidden md:grid grid-cols-2">
-        <aside class="flex">
-            <p class="font-semibold text-[--fourth-color] text-2xl tracking-wider place-self-center">{`<LexCode />`}</p>
+        <aside class="flex py-2" >
+            <a href="/" class="place-self-center focus:bg-transparent h-full"><Logo /></a>
         </aside>
         <aside>
             <nav class="flex justify-end my-2 gap-4">

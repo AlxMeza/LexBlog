@@ -1,0 +1,17 @@
+---
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const filterPosts = allPosts.sort((x, y) => new Date(y.frontmatter.pubDate) < new Date(x.frontmatter.pubDate) ? -1 : 1).splice(0, 5)
+---
+
+<div class="pt-2 my-5">
+    <h2 class="text-xl font-semibold">Últimos artículos</h2>
+    <ul class="py-2">
+        { filterPosts.map(post => <div class="py-2 my-2 flex hover:bg-[--terciary-color] px-5">
+                <img class="h-[4rem] w-[4rem] object-cover bg-black rounded-md" src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
+                <a class="place-self-center mx-10" href={post.url}>
+                    <p>{post.frontmatter.title}</p>
+                    <p>{new Date(post.frontmatter.pubDate).toLocaleString("es-MX", {year: "numeric", month: "long", day: "numeric"})}</p>
+                </a>
+            </div>) }
+    </ul>
+</div>
