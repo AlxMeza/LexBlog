@@ -1,17 +1,27 @@
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+  --primary-color: #3a001e;
+  --secondary-color: #fff5ee;
+  --terciary-color: #b98572;
+  --fourth-color: #cd3a08;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  font-family: sans-serif;
 }
 
 html.dark {
-  background-color: #0d0950;
-  color: #fff;
+  --primary-color: #fff5ee;
+  --secondary-color: #3a001e;
+  --terciary-color: #cd3a08;
+  --fourth-color: #b98572;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  font-family: sans-serif;
 }
 
 .dark .nav-links a {
   color: #fff;
 }
-  
+
 body {
   margin: 0 auto;
   width: 100%;
