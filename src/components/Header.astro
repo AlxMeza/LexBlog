@@ -1,23 +1,31 @@
 ---
 import Navigation from "./Navigation.astro"
 import Hamburger from "../components/Hamburger.astro"
-import ThemeIcon from "../components/ThemIcon.astro"
-import ThemIcon from "../components/ThemIcon.astro"
+import ThemeIcon from "../components/ThemeIcon.astro"
 ---
 
-<header class="grid grid-cols-2">
-    <aside class="flex">
-        <p class="font-semibold text-[--fourth-color] text-2xl tracking-wider place-self-center">{`<LexCode />`}</p>
-    </aside>
-    <aside>
-        <nav class="flex justify-end my-2 gap-4">
-            <span><ThemeIcon/></span>
-            <span class="px-2 p-2"><a href="https://www.instagram.com/lex.dev_code/" target="_blank">
-                <svg class="fill-[--primary-color] hover:fill-fuchsia-500 w-[2rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>    
-            </a></span>
-            <span class="px-2 p-2"><a href="https://www.linkedin.com/in/alexis-meza-mejia/">
-                <svg class="fill-[--primary-color] hover:fill-blue-600 w-[2rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M216 20H40a20 20 0 0 0-20 20v176a20 20 0 0 0 20 20h176a20 20 0 0 0 20-20V40a20 20 0 0 0-20-20m-4 192H44V44h168Zm-100-36v-52a12 12 0 0 1 21.43-7.41A40 40 0 0 1 192 152v24a12 12 0 0 1-24 0v-24a16 16 0 0 0-32 0v24a12 12 0 0 1-24 0m-16-52v52a12 12 0 0 1-24 0v-52a12 12 0 0 1 24 0M68 80a16 16 0 1 1 16 16a16 16 0 0 1-16-16"/></svg>
-            </a></span>
-        </nav>
-    </aside>
+<header>
+    <div class="hidden md:grid grid-cols-2">
+        <aside class="flex">
+            <p class="font-semibold text-[--fourth-color] text-2xl tracking-wider place-self-center">{`<LexCode />`}</p>
+        </aside>
+        <aside>
+            <nav class="flex justify-end my-2 gap-4">
+                <span><ThemeIcon/></span>
+                <span class="px-2 p-2"><a href="https://www.instagram.com/lex.dev_code/" target="_blank">
+                    <svg class="fill-[--primary-color] hover:fill-fuchsia-500 w-[2rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>    
+                </a></span>
+                <span class="px-2 p-2"><a href="https://www.linkedin.com/in/alexis-meza-mejia/">
+                    <svg class="fill-[--primary-color] hover:fill-blue-600 w-[2rem]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M216 20H40a20 20 0 0 0-20 20v176a20 20 0 0 0 20 20h176a20 20 0 0 0 20-20V40a20 20 0 0 0-20-20m-4 192H44V44h168Zm-100-36v-52a12 12 0 0 1 21.43-7.41A40 40 0 0 1 192 152v24a12 12 0 0 1-24 0v-24a16 16 0 0 0-32 0v24a12 12 0 0 1-24 0m-16-52v52a12 12 0 0 1-24 0v-52a12 12 0 0 1 24 0M68 80a16 16 0 1 1 16 16a16 16 0 0 1-16-16"/></svg>
+                </a></span>
+            </nav>
+        </aside>
+    </div>
+    <div class="block md:hidden">
+        <section class="flex">
+            <aside class="w-full pl-4"><ThemeIcon/></aside>
+            <aside class="w-8/12"><Hamburger/></aside>
+        </section>
+    </div>
+    <Navigation/> 
 </header>

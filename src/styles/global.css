@@ -37,34 +37,32 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
-  color: blueviolet;
+  color: var(--terciary-color);
 }
 
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
+  top: 3.3rem;
+  background-color: var(--secondary-color);
   display: none;
   margin: 0;
 }
   
 .nav-links a {
   text-decoration: none;
-  color:rgb(76, 3, 125);
-  padding: 0 1rem;
-  border: 2px solid transparent;
-  margin: 0 0.5rem;
+  color:var(--primary-color);
+  padding: 0.4rem 1rem;
+  border: 0.2rem solid transparent;
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .nav-links:visited {
-  color: rgb(186, 29, 234);
+  color: var(--terciary-color);
 }
   
 .nav-links a:hover, a:focus {
-  background-color: #a82dd842;
+  background-color: var(--terciary-color);
 }
   
 .expanded {
@@ -73,7 +71,7 @@ h1 {
   
 @media screen and (min-width: 636px) {
   .nav-links {
-    display: block;
+    display: hidden;
     position: static;
     width: auto;
     background: none;
@@ -82,15 +80,13 @@ h1 {
   .nav-links a {
     display: inline-block;
     text-decoration: none;
-    color:aliceblue;
-    padding: 0 1rem;
+    color:var(--secondary-color);
+    padding: 0 4rem;
     border: 2px solid transparent;
-    margin: 0 0.5rem;
     font-size: 0.9rem;
   }
 
   .nav-links a:hover{
-    color:rgb(225, 231, 237);
     border-bottom: 2px solid rgb(225, 231, 237);
     background: none;
   }
@@ -111,7 +107,7 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: indigo;
+  background-color: var(--primary-color);
   margin: 0 0 0.5rem auto;
 }
 
