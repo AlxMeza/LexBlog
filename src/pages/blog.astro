@@ -10,10 +10,11 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 
 <Head title={pageTitle} />
 <body>
-    <BaseLayout pageTitle="This is my blog 📒">
-        <p>Aqui es donde publicare cosas interesantes 🥳</p>
+    <BaseLayout pageTitle="Blog 📒">
+        <p class="my-5 font-semibold text-xl text-[--primary-color]">Aquí es donde publicare cosas interesantes</p>
         <ul>
-            {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+            {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} pubDate={post.frontmatter.pubDate}
+            imageUrl={post.frontmatter.image.url} imageAlt={post.frontmatter.image.alt}/>)}
         </ul>
     </BaseLayout>
 </body>

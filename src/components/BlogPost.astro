@@ -1,5 +1,11 @@
 ---
-const {url, title} = Astro.props;
+const {url, title, pubDate, imageUrl, imageAlt} = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<li><a href={url} class="py-2 my-2 flex hover:bg-[--terciary-color] px-5">
+    <img class="h-[4rem] w-[4rem] object-cover bg-black rounded-md" src={imageUrl} alt={imageAlt}>
+    <div class="place-self-center mx-10">
+        <p>{title}</p>
+        <p>{new Date(pubDate).toLocaleString("es-MX", {year: "numeric", month: "long", day: "numeric"})}</p>
+    </div>
+</a></li>

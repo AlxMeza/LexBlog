@@ -5,7 +5,7 @@ const filterPosts = allPosts.sort((x, y) => new Date(y.frontmatter.pubDate) < ne
 
 <div class="pt-2 my-5">
     <h2 class="text-xl font-semibold">Últimos artículos</h2>
-    <ul class="py-2">
+    <ul class="py-2 mb-5">
         { filterPosts.map(post => <a href={post.url} class="py-2 my-2 flex hover:bg-[--terciary-color] px-5">
                 <img class="h-[4rem] w-[4rem] object-cover bg-black rounded-md" src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
                 <div class="place-self-center mx-10">
