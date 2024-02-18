@@ -1,0 +1,10 @@
+---
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+---
+
+<h2 class="font-semibold text-xl my-4">Articulos por temas</h2>
+<div class="flex flex-wrap gap-3">
+    {tags.map((tag: String) => <a class="my-1 border-2 rounded-full px-5 py-2 inline-block hover:border-[--terciary-color] 
+    hover:text-[--terciary-color] font-semibold w-fit focus:bg-transparent" href={`/tags/${tag}`}>{tag[0].toUpperCase() + tag.slice(1)}</a>)}
+</div>
