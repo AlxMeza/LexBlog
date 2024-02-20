@@ -4,6 +4,7 @@ html {
   --terciary-color: #b3876c;
   --fourth-color: #f47504;
   --link-color: #008166;
+  --logo-color: #c75000;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   font-family: sans-serif;
@@ -15,6 +16,7 @@ html.dark {
   --terciary-color: #f47504;
   --fourth-color: #b3876c;
   --link-color: #00b999;
+  --logo-color: #ffd06b;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   font-family: sans-serif;
@@ -160,5 +162,11 @@ h1 {
 
   & code {
     margin-bottom: 0.5rem;
+  }
+
+  & img {
+    margin: 1rem auto;
+    border-radius: 1.2rem;
+    object-fit: cover;
   }
 }
